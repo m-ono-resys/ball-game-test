@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(movement * speed);
     }
 
+    private void Update()
+    {
+        movementX = Input.acceleration.x;
+        movementY = Input.acceleration.y;
+    }
+
     void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
