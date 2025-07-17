@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
     private void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
-        Debug.Log(movementVector);
         _movementX = movementVector.x;
         _movementY = movementVector.y;
     }
