@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
 
     public TextMeshProUGUI countText;
+    public GameObject winTextObject;
 
     private int _count;
 
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _count = 0;
         SetCountText();
+        winTextObject.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -57,10 +59,15 @@ public class PlayerController : MonoBehaviour
     }
 
     private void SetCountText()
-   {
-        int remind = 10 - _count;
+    {
+        int pickUpBox = 10;
+        int remind = pickUpBox - _count;
         countText.text = "あと " + remind.ToString() + "こ";
-   }
+        if (remind == 0)
+        {
+            winTextObject.SetActive(true);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
