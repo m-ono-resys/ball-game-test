@@ -66,6 +66,8 @@ public class PlayerController : MonoBehaviour
         if (remind == 0)
         {
             winTextObject.SetActive(true);
+            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
+
         }
     }
 
@@ -76,6 +78,16 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             _count++;
             SetCountText();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            winTextObject.SetActive(true);
+            winTextObject.GetComponent<TextMeshProUGUI>().text = "きみのまけ";
         }
     }
 }
