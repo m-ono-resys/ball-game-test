@@ -2,18 +2,22 @@ using UnityEngine;
 
 public class RandomObject : MonoBehaviour
 {
+    public int pickUpBoxCount;
+
+    public int dynamicBoxCount;
+
     public GameObject prefabPickUp;
     public GameObject prefabDynamicBox;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < pickUpBoxCount; i++)
         {
             MakeObject(prefabPickUp);
         }
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < dynamicBoxCount; i++)
         {
             MakeObject(prefabDynamicBox);
         }

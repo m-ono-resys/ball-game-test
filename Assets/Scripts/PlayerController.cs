@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
+    public RandomObject randomObject;
+
     private int _count;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -60,8 +62,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetCountText()
     {
-        int pickUpBox = 10;
-        int remind = pickUpBox - _count;
+        int remind = randomObject.pickUpBoxCount - _count;
         countText.text = "あと " + remind.ToString() + "こ";
         if (remind == 0)
         {

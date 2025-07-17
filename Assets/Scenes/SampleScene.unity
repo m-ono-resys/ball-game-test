@@ -380,6 +380,7 @@ MonoBehaviour:
   speed: 10
   countText: {fileID: 1624104642}
   winTextObject: {fileID: 189878053}
+  randomObject: {fileID: 1047246913}
 --- !u!114 &188759161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,6 +1216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a595cdf58d332ea4095fd5915e846806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpBoxCount: 5
+  dynamicBoxCount: 10
   prefabPickUp: {fileID: 1218807329618807211, guid: 26edc59f1942635479c96c097a8b0b52, type: 3}
   prefabDynamicBox: {fileID: 4415220424462374528, guid: f26b019ce929a6140b7a155c51980d92, type: 3}
 --- !u!4 &1047246914
