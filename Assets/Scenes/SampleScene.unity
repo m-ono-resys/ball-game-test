@@ -1216,7 +1216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPickUp: {fileID: 1218807329618807211, guid: 26edc59f1942635479c96c097a8b0b52, type: 3}
-  prefabEnemy: {fileID: 6279537576283934681, guid: f1f7a6e81c2f1844180e80fdd67c1ead, type: 3}
 --- !u!4 &1047246914
 Transform:
   m_ObjectHideFlags: 0
@@ -1884,7 +1883,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
