@@ -3,31 +3,27 @@ using UnityEngine;
 public class RandomObject : MonoBehaviour
 {
     public GameObject prefabPickUp;
-    // public GameObject prefabEnemy;
+    public GameObject prefabDynamicBox;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        float x;
-        float z;
-        Vector3 position;
+        for (int i = 0; i < 10; i++)
+        {
+            MakeObject(prefabPickUp);
+        }
 
         for (int i = 0; i < 10; i++)
         {
-            x = Random.Range(-18.0f, 18.0f);
-            z = Random.Range(-18.0f, 18.0f);
-
-            position = new(x, 0.5f, z);
-
-            _ = Instantiate(prefabPickUp, position, Quaternion.identity);
+            MakeObject(prefabDynamicBox);
         }
+    }
 
-        // x = Random.Range(-18.0f, 18.0f);
-        // z = Random.Range(-18.0f, 18.0f);
-
-        // position = new(x, 0.5f, z);
-
-        // _ = Instantiate(prefabEnemy, position, Quaternion.identity);
-
+    private void MakeObject(GameObject gameObject)
+    {
+        float x = Random.Range(-18.0f, 18.0f);
+        float z = Random.Range(-18.0f, 18.0f);
+        Vector3 position = new(x, 0.5f, z);
+        _ = Instantiate(gameObject, position, Quaternion.identity);
     }
 }

@@ -1216,6 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPickUp: {fileID: 1218807329618807211, guid: 26edc59f1942635479c96c097a8b0b52, type: 3}
+  prefabDynamicBox: {fileID: 4415220424462374528, guid: f26b019ce929a6140b7a155c51980d92, type: 3}
 --- !u!4 &1047246914
 Transform:
   m_ObjectHideFlags: 0
