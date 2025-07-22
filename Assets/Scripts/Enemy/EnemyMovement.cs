@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        SetState(new EnemyFleeState());
+        SetState(new EnemyChaseState());
     }
 
     // Update is called once per frame
