@@ -1887,10 +1887,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 30
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1912,8 +1912,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 188759157}
+  navMeshAgent: {fileID: 0}
   detectionRange: 5
-  _fleeDistance: 5
+  fleeDistance: 5
   chaseDistance: 2
   shouldChase: 1
 --- !u!1660057539 &9223372036854775807
